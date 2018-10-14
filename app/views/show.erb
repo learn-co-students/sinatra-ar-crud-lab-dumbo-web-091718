@@ -1,0 +1,9 @@
+<h2> Here's Your Post </h2><br>
+Name: <%= @post.name %>
+Content: <%= @post.content %>
+<br>
+
+<form onsubmit="return confirm('Are you sure you want to delete the post?')" action="/posts/<%=@post.id%>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
